@@ -61,7 +61,7 @@
     <delete id="delById">
         DELETE FROM `${TABLE_NAME}`
         <where>
-            `${COLUMN.COLUMN_NAME}` = ${hash_key}{bean.${COLUMN.ENTITY_PROPERTY_NAME}}
+            `${COLUMN.COLUMN_NAME}` = ${hash_key}{${COLUMN.ENTITY_PROPERTY_NAME}}
         </where>
     </delete>
     </#if>
@@ -74,7 +74,7 @@
         <include refid="common_sql" />
         FROM `${TABLE_NAME}`
         <where>
-            `${COLUMN.COLUMN_NAME}` = ${hash_key}{bean.${COLUMN.ENTITY_PROPERTY_NAME}}
+            `${COLUMN.COLUMN_NAME}` = ${hash_key}{${COLUMN.ENTITY_PROPERTY_NAME}}
         </where>
     </#if>
 </#list>

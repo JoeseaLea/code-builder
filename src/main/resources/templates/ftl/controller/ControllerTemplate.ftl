@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * <p>@date : ${CREATE_DATE}</p>
  * <p>@description : </p>
  */
-@RestController(value = "${ENTITY_NAME}")
+@RestController
+@RequestMapping(value = "${ENTITY_NAME}")
 public class ${ENTITY_CLASS_NAME}Controller {
 
     @Autowired
